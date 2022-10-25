@@ -1,0 +1,218 @@
+---
+import Icon from "../components/icon.astro";
+import Img from "../components/img.astro";
+import List from "../components/list.astro";
+import Dash from "../components/dash.astro";
+import Card from "../components/card.astro";
+---
+
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>ООО "Сапсан" - ИТ-обслуживание компаний</title>
+		<meta name="description" content="ИТ-обслуживание компаний и комплексная IT-поддержка бизнеса">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	</head>
+	<body
+		class="grid font-[Raleway] text-white min-h-screen grid-cols-[100%] grid-rows-[auto,1fr,auto] bg-white"
+	>
+		<header
+			class="h-[60px] lg:h-[100px] sticky top-0 z-10 bg-white border-b-2 border-gray-100 "
+		>
+			<div class="container flex justify-between h-full items-center mx-auto px-5 lg:px-10">
+				<a href="/" class="font-bold text-cape-cod lg:text-[32px] text-xl leading-6">
+					<span class="text-emerald">ООО</span> ОКС
+				</a>
+				<div class="grid grid-cols-3 lg:grid-cols-[repeat(3,auto)] items-center gap-2 lg:gap-5 font-medium text-2xl leading-7">
+					<a class=" flex justify-center lg:w-auto items-center w-10 h-10 rounded-full lg:border-none border-2 border-gallery transition-all duration-300 text-firefly hover:text-emerald active:border-emerald disabled:text-oslo-gray disabled:border-oslo-gray focus-visible:text-emerald focus:text-emerald  focus:outline-none" href="tel:+74951203984">
+						<Icon
+							text="lg:hidden"
+							name="phone"
+						/>
+						<span class="sr-only lg:not-sr-only text-cape-cod">
+							+7 (495) 120-39-84
+						</span>
+					</a>
+					<span class="bg-emerald h-0.5 lg:w-[60px] w-full"></span>
+					<a class="flex justify-center items-center lg:w-auto w-10 h-10 rounded-full lg:border-none border-2 border-gallery transition-all duration-300 text-firefly hover:text-emerald active:border-emerald disabled:text-oslo-gray disabled:border-oslo-gray focus-visible:text-emerald focus:text-emerald  focus:outline-none" href="mailto:it@sapsangroup.ru">
+						<Icon
+							text="lg:hidden"
+							name="mail"
+						/>
+						<span class="sr-only lg:not-sr-only text-cape-cod">
+							it@sapsangroup.ru
+						</span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section>
+				<div class="container grid gap-5 lg:gap-10 mx-auto px-5 lg:px-10 pt-10">
+					<div
+						class="bg-center from-firefly to-firefly bg-cover bg-blend-color rounded-xl h-[200px]"
+						style="background-image: linear-gradient(to top, var(--tw-gradient-stops)), url(/hero.jpg);"
+					></div>
+					<h1 class="font-bold text-2xl text-cape-cod leading-7 lg:text-5xl lg:leading-[60px] text-center">
+						ИТ-обслуживание <span class="text-emerald">компаний</span>
+					</h1>
+					<ul class="grid gap-5 lg:grid-flow-col lg:gap-8">
+						{
+							[
+								'Обслуживание компьютеров, оргтехники и серверов компаний',
+								'Организация системы резервного копирования',
+								'Внедрение круглосуточного мониторинга ИТ-структуры',
+								'Регламентные работы, настройка ПО и консультации',
+								'Команда ИТ-инженеров поддержки 24/7'
+							].map((item, i) => (
+								<li class="grid items-center gap-8 grid-cols-[auto,1fr] lg:grid-cols-none lg:grid-rows-[auto,1fr] lg:justify-items-center">
+									<Icon
+										size="h-[60px] w-[60px] lg:w-[84px] lg:h-[84px]"
+										text="text-coral"
+										name={`hero-${i + 1}`}
+									/>
+									<span class="lg:text-center text-sm font-medium lg:text-base text-cape-cod">{item}</span>
+								</li>
+							))
+						}
+					</ul>
+				</div>
+			</section>
+			<Dash/>
+			<section>
+				<div class="container items-center lg:grid-cols-[1fr,auto] grid gap-5 lg:hap-10 mx-auto px-5 lg:px-10">
+					<Img
+						src="/enginer.jpg"
+					/>
+					<div class="grid gap-5 lg:col-start-1 lg:row-start-1">
+						<h2 class="font-bold text-2xl text-cape-cod leading-7 lg:text-5xl lg:leading-[60px]">
+							Обслуживание <span class="text-emerald whitespace-nowrap">ИТ-инфраструктуры</span> включает:
+						</h2>
+						<List
+							data={[
+								'Администрирование серверов и сетевого оборудования.',
+								'Обслуживание компьютеров и оргтехники.',
+								'Резервное копирование с уведомлением.',
+								'Внедрение политики ИТ-безопасности.',
+								'Закупка компьютерного оборудования.',
+								'Автоматизированный ИТ-мониторинг.'
+							]}
+						/>
+					</div>
+				</div>
+			</section>
+			<Dash/>
+				<section>
+					<div class="container rounded-3xl w-full mx-auto lg:p-10  p-5 bg-firefly">
+						<div class="grid lg:grid-cols-[1fr,auto,auto] gap-x-10">
+							<p class="md:text-5xl pb-5 text-xl font-bold pr-10">Наши <span class="text-emerald">продукты</span></p>
+							<Card/>
+							<Card/>
+						</div>
+					</div>
+				</section>
+			<Dash/>
+			<section class="grid gap-10 lg:gap-20">
+				<div class="container mx-auto px-5 lg:-mb-10 lg:px-10">
+					<p class="font-bold lg:text-center text-2xl leading-7 lg:text-5xl lg:leading-[60px]"><span class="text-cape-cod">Комплексная</span> <span class="whitespace-nowrap text-emerald">IT-поддержка бизнеса</span></p>
+				</div>
+				<div class="container items-center lg:grid-cols-[auto,1fr] grid gap-5 mx-auto px-5 lg:gap-20 lg:px-10">
+					<Img
+						src="/dev.jpg"
+					/>
+					<div class="grid gap-5 h-max">
+						<p class="font-bold text-2xl leading-7 lg:text-[32px] lg:leading-[40px] text-cape-cod">Техническое обслуживание и ремонт средств вычислительной техники:</p>
+						<List
+							data={[
+								'Диагностика предполагаемой неисправности оборудования компонента или его части (оборудования, встроенного программного обеспечения).',
+								'Выполнение работ по расширенному техническому обслуживанию оборудования.',
+								'Выполнение профилактических работ.',
+								'Выполнение ремонтно-восстановительных работ.',
+								'Установка обновлений встроенного программного обеспечения.',
+								'Организация Центра Компетенций, предоставляющего поддержку экспертного уровня.'
+							]}
+						/>
+					</div>
+				</div>
+				<div class="container grid items-center lg:grid-cols-[1fr,auto] gap-5 mx-auto px-5 lg:gap-20 lg:px-10">
+					<div class="lg:col-start-2">
+						<Img
+							src="/analitics.jpg"
+						/>
+					</div>
+					<div class="lg:row-start-1 grid gap-5 h-max">
+						<p class="font-bold text-2xl leading-7 lg:text-[32px] lg:leading-[40px] text-cape-cod">Аудит IT инфраструктуры:</p>
+						<List
+							data={[
+								'Анализ технического состояния оборудования.',
+								'Функциональный анализ аппаратных и программных ресурсов.',
+								'Анализ защищенности информации от внешних и внутренних угроз. Создание модели угроз безопасности информации.',
+								'Анализ организации системы бесперебойного электропитания.',
+								'Формирование рекомендаций по оптимизации ИТ Инфраструктуры.'
+							]}
+						/>
+					</div>
+				</div>
+				<div class="container grid items-center gap-5 lg:grid-cols-[auto,1fr] lg:gap-20 mx-auto px-5 lg:px-10">
+					<Img
+						src="/network.jpg"
+					/>
+					
+					<div class="grid gap-5 h-max">
+						<p class="font-bold text-2xl leading-7 lg:text-[32px] lg:leading-[40px] text-cape-cod">Предоставление средств вычислительной техники и телекоммуникационного оборудования по сервисной схеме:</p>
+						<p class="text-emerald font-medium lg:text-2xl">Услуги по аренде оборудования:</p>
+						<List
+							data={[
+								'Телекоммуникационное оборудование.',
+								'Серверное оборудование.',
+								'Источники бесперебойного питания.',
+								'Системы хранения данных.'
+							]}
+						/>
+						<p class="text-emerald font-medium lg:text-2xl">Сервисная поддержка:</p>
+						<List
+							data={[
+								'Оборудование обеспечивается сервисной поддержкой на весь период аренды.'
+							]}
+						/>
+					</div>
+				</div>
+			</section>
+			<Dash/>
+				<section>
+					<div class="container mx-auto px-5 lg:px-10 text-cape-cod">
+						<div class="py-10 lg:px-10 grid gap-5 px-5 rounded-xl lg:grid-flow-col lg:gap-14">
+							<p class=" text-2xl leading-7 lg:text-5xl lg:leading-[60px] font-bold">О компании</p>
+							<p class="text-sm lg:text-base font-medium lg:columns-2 lg:gap-10 lg:pt-2">
+								Компания САПСАН основана в 2012 году. В компании работают высококвалифицированные ИТ-специалисты и бизнес-консультанты, получившие многолетний опыт в создании <br>ИТ-инфраструктур предприятий, развертывании информационных систем, оказании консалтинговых услуг, решении задач системной интеграции, выполнении всех видов работ по ИТ-аутсорсингу и т.д.
+							</p>
+						</div>
+					</div>
+				</section>
+			<Dash/>
+		</main>
+		<footer class="text-white translate-x-0  rounded-t-3xl bg-firefly">
+			<div class="container lg:gap-20 xl:gap-36 lg:grid-cols-[auto,1fr] mx-auto grid gap-5 pt-24 px-5 pb-10">
+				<p class="text-5xl font-bold lg:pr-10">Наши <span class="text-emerald">реквизиты</span></p>
+				<div class="grid gap-10 lg:grid-cols-2 lg:pt-2">
+					<p>
+						ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ «ОБЪЕДИНЕННЫЕ КРЕДИТНЫЕ СЕРВИСЫ»
+					</p>
+					<p>
+						ОГРН:1207700385870
+						<br>ИНН: 7743348390
+						<br>КПП: 774301001
+						<br>Дата регистрации: 16.10.2020
+						<br>Юридический адрес: 125212, город Москва, 
+						Кронштадтский бульвар, дом 6 корпус 2, этаж 6, помещение 49
+					</p>
+				</div>
+			</div>	
+		</footer>
+	</body>
+</html>

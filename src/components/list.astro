@@ -1,0 +1,17 @@
+---
+const {
+	data
+} = Astro.props
+---
+<ul class="grid gap-5">
+	{
+		data.map((item) => (
+			<li class="grid gap-8 grid-cols-[auto,1fr]">
+				<span
+					class="bg-emerald rounded w-5 h-5 lg:w-6 lg:h-6"
+				></span>
+				<span class="font-medium text-sm lg:text-base text-cape-cod">{item}</span>
+			</li>
+		))
+	}
+</ul>

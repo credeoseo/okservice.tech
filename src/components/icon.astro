@@ -1,0 +1,11 @@
+---
+const {
+	name,
+	size,
+	text
+} = Astro.props
+
+---
+<svg class:list={['fill-current', text, size || 'h-6 w-6' ]}>
+	<use xlink:href={`/icons.svg#${name}`}></use>
+</svg>
