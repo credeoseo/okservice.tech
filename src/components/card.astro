@@ -5,8 +5,8 @@ item
 } = Astro.props
 ---
 
-<div class="relative bg-white rounded-3xl h-full max-w-[374px] mb-5 lg:my-0">
-    <div class="grid grid-cols-[1fr,auto] px-6 pt-6">
+<div class="relative bg-white rounded-3xl h-full max-w-[374px] w-full lg:my-0">
+    <div class="grid grid-cols-[1fr,auto] gap-4 px-6 pt-6">
         <p class="lg:text-2xl text-lg font-medium text-cape-cod">{item.title}</p>
         <a class="before:absolute before:inset-0 w-14 h-14 flex items-center justify-center rounded-full border-2 border-gallery transition-all duration-300 text-firefly hover:text-emerald active:border-emerald disabled:text-oslo-gray disabled:border-oslo-gray focus-visible:text-emerald focus:text-emerald  focus:outline-none " rel="nofollow, noopener" href={item.link} >
             <span class="sr-only">{item.link}</span>
