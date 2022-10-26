@@ -4,6 +4,7 @@ import Img from "../components/img.astro";
 import List from "../components/list.astro";
 import Dash from "../components/dash.astro";
 import Card from "../components/card.astro";
+const array = ['1312', 'dsfsd']
 ---
 
 <html lang="ru">
@@ -12,7 +13,7 @@ import Card from "../components/card.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>ООО "Сапсан" - ИТ-обслуживание компаний</title>
+		<title>ООО "ОКС" - ИТ-обслуживание компаний</title>
 		<meta name="description" content="ИТ-обслуживание компаний и комплексная IT-поддержка бизнеса">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,13 +40,13 @@ import Card from "../components/card.astro";
 						</span>
 					</a>
 					<span class="bg-emerald h-0.5 lg:w-[60px] w-full"></span>
-					<a class="flex justify-center items-center lg:w-auto w-10 h-10 rounded-full lg:border-none border-2 border-gallery transition-all duration-300 text-firefly hover:text-emerald active:border-emerald disabled:text-oslo-gray disabled:border-oslo-gray focus-visible:text-emerald focus:text-emerald  focus:outline-none" href="mailto:it@sapsangroup.ru">
+					<a class="flex justify-center items-center lg:w-auto w-10 h-10 rounded-full lg:border-none border-2 border-gallery transition-all duration-300 text-firefly hover:text-emerald active:border-emerald disabled:text-oslo-gray disabled:border-oslo-gray focus-visible:text-emerald focus:text-emerald  focus:outline-none" href="mailto:hello@credeo.ru">
 						<Icon
 							text="lg:hidden"
 							name="mail"
 						/>
 						<span class="sr-only lg:not-sr-only text-cape-cod">
-							it@sapsangroup.ru
+							hello@credeo.ru
 						</span>
 					</a>
 				</div>
@@ -108,11 +109,29 @@ import Card from "../components/card.astro";
 			</section>
 			<Dash/>
 				<section>
-					<div class="container rounded-3xl w-full mx-auto lg:p-10  p-5 bg-firefly">
-						<div class="grid lg:grid-cols-[1fr,auto,auto] gap-x-10">
-							<p class="md:text-5xl pb-5 text-xl font-bold pr-10">Наши <span class="text-emerald">продукты</span></p>
-							<Card/>
-							<Card/>
+					<div class=" container mx-auto px-5 lg:px-10">
+						<div class=" rounded-3xl mx-auto lg:p-10 p-5 bg-firefly">
+							<div class="grid lg:grid-cols-[auto,1fr,1fr] gap-x-10 px-10">
+								<p class="md:text-5xl pb-5 text-xl font-bold pr-10">Наши <span class="text-emerald">продукты</span></p>
+								{
+									[
+										{
+											title: 'Партнер',
+											logo: 'logo-1',
+											link: 'https://credeo.ru/'
+										},
+										{
+											title: 'Интегратор Amo CRM',
+											logo: 'logo-2',
+											link: 'https://www.amocrm.ru/'
+										}
+									].map((item) => (
+										<Card
+											item={item}
+										/>
+									))
+								}
+							</div>
 						</div>
 					</div>
 				</section>
@@ -189,7 +208,7 @@ import Card from "../components/card.astro";
 						<div class="py-10 lg:px-10 grid gap-5 px-5 rounded-xl lg:grid-flow-col lg:gap-14">
 							<p class=" text-2xl leading-7 lg:text-5xl lg:leading-[60px] font-bold">О компании</p>
 							<p class="text-sm lg:text-base font-medium lg:columns-2 lg:gap-10 lg:pt-2">
-								Компания САПСАН основана в 2012 году. В компании работают высококвалифицированные ИТ-специалисты и бизнес-консультанты, получившие многолетний опыт в создании <br>ИТ-инфраструктур предприятий, развертывании информационных систем, оказании консалтинговых услуг, решении задач системной интеграции, выполнении всех видов работ по ИТ-аутсорсингу и т.д.
+								Компания ОКС основана в 2012 году. В компании работают высококвалифицированные ИТ-специалисты и бизнес-консультанты, получившие многолетний опыт в создании <br>ИТ-инфраструктур предприятий, развертывании информационных систем, оказании консалтинговых услуг, решении задач системной интеграции, выполнении всех видов работ по ИТ-аутсорсингу и т.д.
 							</p>
 						</div>
 					</div>
