@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Mulish';
+  src: url('./Mulish-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 1 999;
+}
+
